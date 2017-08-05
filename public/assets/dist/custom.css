@@ -1,18 +1,21 @@
+/*
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i);
 /*! Candy v1.1.0 by Puzzalea
     Docs: https://github.com/puzzalea/candy */
 /*--------*/
 /* Resets */
 /*--------*/
-* {
+/*
+{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/*------*/
-/* Grid */
-/*------*/
+------
+ Grid 
+------
 .container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -74,9 +77,9 @@
     width: 66.66667%;
   }
 }
-/*--------*/
-/* Global */
-/*--------*/
+--------
+ Global 
+--------
 html {
   font-size: 62.5%;
 }
@@ -95,9 +98,9 @@ section {
   padding: 3rem 0;
 }
 
-/*------------*/
-/* Typography */
-/*------------*/
+------------
+ Typography 
+------------
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, ul:first-child, ol:first-child {
   margin-top: 0;
 }
@@ -234,9 +237,9 @@ a:hover, a:focus {
     margin: 3rem 0;
   }
 }
-/*-------*/
-/* Forms */
-/*-------*/
+-------
+ Forms 
+-------
 label {
   display: inline-block;
 }
@@ -356,9 +359,9 @@ label.form-error {
   }
 }
 
-/*--------*/
-/* Tables */
-/*--------*/
+--------
+ Tables 
+--------
 table {
   width: 100%;
   border: 1px solid #4286f4;
@@ -389,9 +392,9 @@ td, th {
   }
 }
 
-/*-------*/
-/* Media */
-/*-------*/
+-------
+ Media 
+-------
 iframe, img, svg {
   max-width: 100%;
 }
@@ -412,9 +415,9 @@ a img {
   border: 0;
 }
 
-/*------------*/
-/* Accordions */
-/*------------*/
+------------
+ Accordions 
+------------
 .accordion {
   overflow: hidden;
   margin-top: 1.5rem;
@@ -441,9 +444,9 @@ a img {
   padding: 1.5rem;
 }
 
-/*------*/
-/* Menu */
-/*------*/
+------
+ Menu 
+------
 nav {
   background-color: rgba(66, 134, 244, 0.97);
 }
@@ -637,9 +640,9 @@ nav {
   width: 100%;
 }
 
-/*---------*/
-/* Buttons */
-/*---------*/
+---------
+ Buttons 
+---------
 button, input[type='button'], input[type='submit'], .button, .blue-button, .light-blue-button, .green-button, .light-green-button, .pink-button, .light-pink-button, .purple-button, .light-purple-button {
   display: inline-block;
   margin: 0 0.5rem 0.5rem 0;
@@ -661,10 +664,10 @@ button:hover, input[type='button']:hover, input[type='submit']:hover, .button:ho
   background-color: #0d5cdd;
 }
 
-/*--------*/
-/* Colors */
-/*--------*/
-/* Backgrounds, text, buttons, and borders */
+--------
+ Colors 
+--------
+ Backgrounds, text, buttons, and borders 
 .white-background {
   background-color: #fff;
 }
@@ -887,9 +890,9 @@ button:hover, input[type='button']:hover, input[type='submit']:hover, .button:ho
   border-bottom: 2px solid #f1e0ff;
 }
 
-/*---------------*/
-/* Miscellaneous */
-/*---------------*/
+---------------
+ Miscellaneous 
+---------------
 input, select, textarea, button, input[type='button'], input[type='submit'], .button, .blue-button, .light-blue-button, .green-button, .light-green-button, .pink-button, .light-pink-button, .purple-button, .light-purple-button, .round-corners {
   border-radius: 5px;
 }
@@ -914,9 +917,9 @@ input, select, textarea, button, input[type='button'], input[type='submit'], .bu
   font-weight: 700;
 }
 
-/*---------*/
-/* Spacing */
-/*---------*/
+---------
+ Spacing 
+---------
 .margin {
   margin: 3rem;
 }
@@ -1068,3 +1071,4 @@ input, select, textarea, button, input[type='button'], input[type='submit'], .bu
 .large-left-padding {
   padding-left: 6rem;
 }
+*/

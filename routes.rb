@@ -1,7 +1,16 @@
 get '/' do
   if no_authentication?
-    erb :"home"
+    erb :"index"
   else
-    "Hi, #{session[:name]}.  <img style='width:60px; border-radius:50%;' src='#{session[:picture]}' >"
+    erb :"index"
+  end
+end
+
+
+get '/activities' do
+  if no_authentication?
+    erb :"activities"
+  else
+    erb :"activities"
   end
 end
