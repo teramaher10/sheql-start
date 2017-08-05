@@ -3,7 +3,7 @@ class Activity < ActiveRecord::Base
 
   validates :supervisor, presence: true
   validates :location, presence: true
-  validates :email, presence: true
+  validates :sup_email, presence: true
   validates :description, presence: true
   validates :hours, presence: true
 end
