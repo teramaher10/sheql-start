@@ -1,0 +1,6 @@
+<h2>Admins</h2>
+<ul>
+<% @admins.each do |admin| %>
+  <li><a href="/admin/<%= admin.id %>">Hi, <%= admin.name %>!</a></li>
+<% end %>
+</ul>

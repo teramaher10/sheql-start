@@ -1,0 +1,6 @@
+<h2>Activities</h2>
+<ul>
+<% @activities.each do |activity| %>
+  <li><a href="/activities/<%= activity.id %>">Hi, <%= activity.hours %>!</a></li>
+<% end %>
+</ul>

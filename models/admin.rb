@@ -1,4 +1,4 @@
-class Administrator < ActiveRecord::Base
+class Admin < ActiveRecord::Base
   has_many :students
   
   validates :name, presence: true
