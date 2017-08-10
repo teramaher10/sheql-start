@@ -30,7 +30,7 @@ get '/authenticated' do
   student.name = "#{info.given_name} #{info.family_name}"
   student.save
   session[:current_student_id] = student.id
-  redirect to('/students/new')
+  redirect to('/actvity/new')
 end
 
 get '/logout' do
@@ -47,3 +47,19 @@ def set_user_session
   session[:expires_in] = user_credentials.expires_in
   session[:issued_at] = user_credentials.issued_at
 end
+def current_user
+  Student.find(session[:current_student_id])
+  #to use: @user = current_user
+end
+
+
+get "/test" do
+  @user = current_user
+  
+  erb :"student/new"
+  
+end
+
+
+
+
