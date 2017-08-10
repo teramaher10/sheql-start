@@ -66,6 +66,8 @@ post '/students' do
 end
 
 get '/' do
+  @user = User.find(session[:current_user_id])
+  "Hi, #{@user.name}.  <img style='width:60px; border-radius:50%;' src='#{@user.picture}' >"
   if no_authentication?
     erb :"index"
   else
