@@ -1,4 +1,4 @@
-/*
+
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i);
 /*! Candy v1.1.0 by Puzzalea
@@ -6,16 +6,17 @@
 /*--------*/
 /* Resets */
 /*--------*/
-/*
-{
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+/*
 ------
  Grid 
 ------
+*/
 .container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -77,9 +78,11 @@
     width: 66.66667%;
   }
 }
+/*
 --------
  Global 
 --------
+*/
 html {
   font-size: 62.5%;
 }
@@ -97,10 +100,11 @@ main {
 section {
   padding: 3rem 0;
 }
-
+/*
 ------------
  Typography 
 ------------
+*/
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, ul:first-child, ol:first-child {
   margin-top: 0;
 }
@@ -237,9 +241,11 @@ a:hover, a:focus {
     margin: 3rem 0;
   }
 }
+/*
 -------
  Forms 
 -------
+*/
 label {
   display: inline-block;
 }
@@ -358,10 +364,11 @@ label.form-error {
     font-size: 1.6rem;
   }
 }
-
+/*
 --------
  Tables 
 --------
+*/
 table {
   width: 100%;
   border: 1px solid #4286f4;
@@ -391,10 +398,11 @@ td, th {
     padding: 0.5rem 1rem;
   }
 }
-
+/*
 -------
  Media 
 -------
+*/
 iframe, img, svg {
   max-width: 100%;
 }
@@ -414,10 +422,11 @@ img {
 a img {
   border: 0;
 }
-
+/*
 ------------
  Accordions 
 ------------
+*/
 .accordion {
   overflow: hidden;
   margin-top: 1.5rem;
@@ -443,10 +452,11 @@ a img {
   display: none;
   padding: 1.5rem;
 }
-
+/*
 ------
  Menu 
 ------
+*/
 nav {
   background-color: rgba(66, 134, 244, 0.97);
 }
@@ -639,10 +649,11 @@ nav {
   left: 0;
   width: 100%;
 }
-
+/*
 ---------
  Buttons 
 ---------
+*/
 button, input[type='button'], input[type='submit'], .button, .blue-button, .light-blue-button, .green-button, .light-green-button, .pink-button, .light-pink-button, .purple-button, .light-purple-button {
   display: inline-block;
   margin: 0 0.5rem 0.5rem 0;
@@ -663,10 +674,11 @@ button, input[type='button'], input[type='submit'], .button {
 button:hover, input[type='button']:hover, input[type='submit']:hover, .button:hover, button:focus, input[type='button']:focus, input[type='submit']:focus, .button:focus {
   background-color: #0d5cdd;
 }
-
+/*
 --------
  Colors 
 --------
+*/
  Backgrounds, text, buttons, and borders 
 .white-background {
   background-color: #fff;
@@ -889,10 +901,11 @@ button:hover, input[type='button']:hover, input[type='submit']:hover, .button:ho
 .light-purple-underline {
   border-bottom: 2px solid #f1e0ff;
 }
-
+/*
 ---------------
  Miscellaneous 
 ---------------
+*/
 input, select, textarea, button, input[type='button'], input[type='submit'], .button, .blue-button, .light-blue-button, .green-button, .light-green-button, .pink-button, .light-pink-button, .purple-button, .light-purple-button, .round-corners {
   border-radius: 5px;
 }
@@ -916,10 +929,11 @@ input, select, textarea, button, input[type='button'], input[type='submit'], .bu
 .bold-weight {
   font-weight: 700;
 }
-
+/*
 ---------
  Spacing 
 ---------
+*/
 .margin {
   margin: 3rem;
 }
@@ -1071,4 +1085,3 @@ input, select, textarea, button, input[type='button'], input[type='submit'], .bu
 .large-left-padding {
   padding-left: 6rem;
 }
-*/
