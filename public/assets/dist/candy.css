@@ -928,10 +928,11 @@ input, select, textarea, button, input[type='button'], input[type='submit'], .bu
 .bold-weight {
   font-weight: 700;
 }
-
+/*
 ---------
  Spacing 
 ---------
+*/
 .margin {
   margin: 3rem;
 }
