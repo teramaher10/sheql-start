@@ -1,0 +1,18 @@
+<h1>Edit an Activity</h1>
+<form action="/activities/<%= @activity.id %>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    
+    <label>Location:</label> <input type="location" name="location" value="<%= @activity.location %>">
+    <br>
+    <!-- <label>Date:</label> <input type="date" name="date" value=""> -->
+    <br>
+    <label>Supervisor:</label> <input type="supervisor" name="supervisor" value="<%= @activity.supervisor %>">
+    <br>
+    <label>Supervisor Email:</label> <input type="email" name="sup_email" value="<%= @activity.sup_email %>">
+    <br>
+    <label>Description of Work:</label> <input type="description" name="description" value="<%= @activity.description %>">
+    <br>
+    <label>Amount of Hours:</label> <input type="hours" name="hours" value="<%= @activity.hours %>">
+    <br>
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,12 @@
+<h1> View Activity <%= @activity.id %> </h1>
+
+<p><%= @activity.description %></p>
+
+<p><%= @activity.location %></p>
+<p> <%= @activity.supervisor %></p>
+<p><%= @activity.sup_email %></p>
+<p><%= @activity.hours %></p>
+    
+
+<a href="/activities">Back</a>
+<a href="/activities/<%= @activity.id %>/edit">Edit</a>

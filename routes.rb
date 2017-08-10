@@ -1,9 +1,10 @@
+get '/activities' do
+  @activities = Activity.all
+  erb :"activity/activities"
+end
+
 get '/activities/new' do
-  if no_authentication?
     erb :"activity/new"
-  else
-    erb :"activity/new"
-  end
 end
 
 post '/activities' do
@@ -17,10 +18,45 @@ post '/activities' do
   redirect "/activities"
 end
 
-get '/activities' do
-  @activities = Activity.all
-  erb :"activity/activities"
+get '/activities/:id' do
+  id = params[:id].to_i
+  @activity = Activity.find(id)
+  erb :"activity/show"
 end
+
+get '/activities/:id/edit' do #load edit form
+    id = params[:id].to_i
+    @activity = Activity.find(id)
+    erb :"/activity/edit"
+end
+
+patch '/activities/:id' do #edit action
+  id = params[:id].to_i
+  @activity = Activity.find(id)
+  @activity.location = params[:location]
+  # @activity.date = params[:date]
+  @activity.supervisor = params[:supervisor]
+  @activity.sup_email = params[:sup_email]
+  @activity.hours = params[:hours]
+  @activity.description = params[:description]
+  @activity.save
+  redirect "/activities"
+end
+
+get '/activities/:id/delete' do #load edit form
+    id = params[:id].to_i
+    @activity = Activity.find(id)
+    erb :"/activity/delete"
+end
+
+delete '/activities' do #delete action
+  id = params[:id].to_i
+  @activity = Activity.find(id)
+  @activity.delete
+  redirect '/activities'
+end
+
+
 
 get '/admin/new' do
   if no_authentication?
