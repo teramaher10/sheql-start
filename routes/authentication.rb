@@ -30,7 +30,7 @@ get '/authenticated' do
   student.name = "#{info.given_name} #{info.family_name}"
   student.save
   session[:current_student_id] = student.id
-  redirect to('/actvity/new')
+  redirect to('/activities/new')
 end
 
 get '/logout' do
