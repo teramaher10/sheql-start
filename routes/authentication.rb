@@ -54,9 +54,9 @@ get '/authenticated/admin' do
   info_service = Google::Apis::Oauth2V2::Oauth2Service.new
   info = info_service.get_userinfo(options: { authorization: user_credentials.access_token })
   # save profile information to session
-  student = Admin.find_or_initialize_by(email: info.email)
-  student.name = "#{info.given_name} #{info.family_name}"
-  student.save
+  admin = Admin.find_or_initialize_by(email: info.email)
+  admin.name = "#{info.given_name} #{info.family_name}"
+  admin.save
   session[:current_student_id] = student.id
   redirect to('/test')
   #/activities/new
@@ -79,6 +79,7 @@ def set_user_session
   session[:expires_in] = user_credentials.expires_in
   session[:issued_at] = user_credentials.issued_at
 end
+
 def current_user
   user = Student.find(session[:current_student_id])
   #to use: @user = current_user
@@ -91,7 +92,3 @@ get "/test" do
   erb :"activity/new"
   
 end
-
-
-
-
