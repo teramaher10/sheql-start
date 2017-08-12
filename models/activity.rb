@@ -6,4 +6,6 @@ class Activity < ActiveRecord::Base
   validates :sup_email, presence: true
   validates :description, presence: true
   validates :hours, presence: true
+  validates :date, presence: true
+  validates :title, presence: true
 end
