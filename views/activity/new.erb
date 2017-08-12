@@ -1,14 +1,17 @@
 <h1>Enter an Activity</h1>
 <%= @user.name %>
 <form method="POST" action="/activities">
+    <label>Title</label> <input type="title" name="title" placeholder="Freshman Day">
+    <br>
+    <label>Description of Work</label> <input type="description" name="description" placeholder="Volunteered on Freshman Day">
+    <br>
     <label>Location</label> <input type="location" name="location" placeholder="Omaha North High School">
-    <!-- <label>Date</label> <input type="date" name="date" placeholder="8/5/2017"> -->
+    <br>
+    <label>Date</label> <input type="date" name="date" placeholder="8/5/2017">
     <br>
     <label>Supervisor</label> <input type="supervisor" name="supervisor" placeholder="Durante">
     <br>
     <label>Supervisor Email</label> <input type="email" name="sup_email" placeholder="email@ops.org">
-    <br>
-    <label>Description of Work</label> <input type="description" name="description" placeholder="Volunteered on Freshman Day">
     <br>
     <label>Amount of Hours*</label> <input type="hours" name="hours" placeholder="5">
     <br>
