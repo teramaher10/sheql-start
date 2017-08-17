@@ -1,0 +1,64 @@
+.darkBackground {
+    background-color:#24457F;
+    font-family: 'Raleway'
+}
+
+.yellowText {
+    color: #FAF313;
+}
+
+.whiteText {
+    color: white;
+}
+
+.activityForm {
+    margin-left: 7%;
+    margin-right: 7%;
+    width: 80%;
+    padding:3%;
+}
+
+.submitButton {
+    background-color: #24457F;
+    outline: none;
+    border: none;
+    float: right;
+    width: 100%;
+    text-align:right;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.field {
+    width:75%;
+    display:block;
+    text-align: center;
+    margin:auto;
+    font-size: 22px;
+}
+
+.input {
+    width:85%;
+    display:block;
+    margin:auto;
+    font-size: 18px;
+    font-family: 'Raleway';
+}
+
+.welcome {
+    font-family:'Raleway';
+    color: white;
+    display:inline-block;
+    width:47%;
+}
+
+.button {
+    background-color: #4062A2;
+    outline: none;
+    border: none;
+    font-weight:bold;
+    float:right;
+    margin-top:1.3em;
+    font-size:22px;
+    
+}

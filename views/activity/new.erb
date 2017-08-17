@@ -1,19 +1,22 @@
-<h1>Enter an Activity</h1>
-<h3>Hello <%= @user.name %></h3>
-<form method="POST" action="/activities">
-    <label>Title</label> <input type="title" name="title" placeholder="Freshman Day">
+<div class="newActPage">
+<h1 class="whiteText welcome">Hello, <%= @user.name %></h1>
+<button class=" yellowText button" href="/activities">View Current Activities</button>
+<form class="darkBackground whiteText activityForm" method="POST" action="/activities">
+    <h2 class="whiteText">Submit Hours</h1>
+    <label class="field">Title</label> <input class="input" type="title" name="title" placeholder="Freshman Day">
     <br>
-    <label>Description of Work</label> <input type="description" name="description" placeholder="Volunteered on Freshman Day">
+    <label class="field">Description of Work</label> <input class="input" type="description" name="description" placeholder="Volunteered on Freshman Day">
     <br>
-    <label>Location</label> <input type="location" name="location" placeholder="Omaha North High School">
+    <label class="field">Location</label> <input class="input" type="location" name="location" placeholder="Omaha North High School">
     <br>
-    <label>Date</label> <input type="date" name="date" placeholder="8/5/2017">
+    <label class="field">Date</label> <input class="input" type="date" name="date" placeholder="8/5/2017">
     <br>
-    <label>Supervisor</label> <input type="supervisor" name="supervisor" placeholder="Durante">
+    <label class="field">Supervisor</label> <input class="input" type="supervisor" name="supervisor" placeholder="Durante">
     <br>
-    <label>Supervisor Email</label> <input type="email" name="sup_email" placeholder="email@ops.org">
+    <label class="field">Supervisor Email</label> <input class="input" type="email" name="sup_email" placeholder="email@ops.org">
     <br>
-    <label>Amount of Hours*</label> <input type="hours" name="hours" placeholder="5">
+    <label class="field">Amount of Hours</label> <input class="input" type="hours" name="hours" placeholder="5">
     <br>
-    <input type="submit" value="Submit">
+    <input class="yellowText submitButton" type="submit" value="Submit">
 </form>
+</div>
