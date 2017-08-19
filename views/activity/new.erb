@@ -1,6 +1,6 @@
-<div class="newActPage">
+
 <h1 class="whiteText welcome">Hello, <%= @user.name %></h1>
-<button class=" yellowText button" href="/activities">View Current Activities</button>
+
 <form class="darkBackground whiteText activityForm" method="POST" action="/activities">
     <h2 class="whiteText">Submit Hours</h1>
     <label class="field">Title</label> <input class="input" type="title" name="title" placeholder="Freshman Day">
@@ -19,4 +19,4 @@
     <br>
     <input class="yellowText submitButton" type="submit" value="Submit">
 </form>
-</div>
+<button class=" yellowText button" href="/activities">View Current Activities</button>

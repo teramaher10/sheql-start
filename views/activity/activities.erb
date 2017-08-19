@@ -1,7 +1,10 @@
-<h2>Activities</h2>
-<ul>
+
+<h1 class="whiteText welcome"><%= @user.name %>'s Activities</h1>
+
+
+<ul class="darkBackground whiteText activityForm activityList">
 <% @activities.each do |activity| %>
-  <li><a href="/activities/<%= activity.id %>">Activity <%= activity.id %>: <%= activity.title %> </a></li>
+  <li class="yellowText bullet"><a class="activityLink" href="/activities/<%= activity.id %>">Activity <%= activity.id %>: <%= activity.title %> </a></li>
 <% end %>
 </ul>
-
+<button class=" yellowText button" href="/activities/new">Submit New Activity</button>

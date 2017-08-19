@@ -1,13 +1,16 @@
 get '/activities' do
+  @user = current_user
   @activities = Activity.all
   erb :"activity/activities"
 end
 
 get '/activities/new' do
+  @user = current_user
     erb :"activity/new"
 end
 
 post '/activities' do
+  @user = current_user
   new_act = Activity.new
   new_act.location = params[:location]
   new_act.supervisor = params[:supervisor]
@@ -21,18 +24,21 @@ post '/activities' do
 end
 
 get '/activities/:id' do
+  @user = current_user
   id = params[:id].to_i
   @activity = Activity.find(id)
   erb :"activity/show"
 end
 
 get '/activities/:id/edit' do #load edit form
+    @user = current_user
     id = params[:id].to_i
     @activity = Activity.find(id)
     erb :"/activity/edit"
 end
 
 patch '/activities/:id' do #edit action
+  @user = current_user
   id = params[:id].to_i
   @activity = Activity.find(id)
   @activity.location = params[:location]
@@ -48,12 +54,14 @@ patch '/activities/:id' do #edit action
 end
 
 get '/activities/:id/delete' do #load edit form
+    @user = current_user
     id = params[:id].to_i
     @activity = Activity.find(id)
     erb :"/activity/delete"
 end
 
 delete '/activities' do #delete action
+  @user = current_user
   id = params[:id].to_i
   @activity = Activity.find(id)
   @activity.delete
@@ -63,11 +71,13 @@ end
 
 
 get '/admin' do
+  @user = current_user
   @admins = Admin.all
   erb :"admin/index"
 end
 
 get '/admin/new' do
+  @user = current_user
   if no_authentication?
     erb :"admin/new"
   else
@@ -76,6 +86,7 @@ get '/admin/new' do
 end
 
 post '/admin' do
+  @user = current_user
   new_admin = Admin.new
   new_admin.name = params[:name]
   new_admin.email = params[:email]
@@ -88,17 +99,20 @@ end
 
 
 get '/students' do
+  @user = current_user
   @students = Student.all
   erb :"student/index"
 end
 
 get '/students/:id/edit' do #load edit form
+    @user = current_user
     id = params[:id].to_i
     @student = Student.find(id)
     erb :"/student/edit"
 end
 
 patch '/students/:id' do #edit action
+  @user = current_user
   id = params[:id].to_i
   @student = Student.find(id)
   @student.name = params[:name]
@@ -107,12 +121,14 @@ patch '/students/:id' do #edit action
 end
 
 get '/students/:id/delete' do #load edit form
+    @user = current_user
     id = params[:id].to_i
     @student = Student.find(id)
     erb :"/student/delete"
 end
 
 delete '/students' do #delete action
+  @user = current_user
   id = params[:id].to_i
   @student = Student.find(id)
   @student.delete
