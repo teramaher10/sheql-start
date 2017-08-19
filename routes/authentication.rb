@@ -4,8 +4,8 @@ end
 
 get '/login' do
   # Page where user can log in
+  erb :"login"
   
-  "Hi!  This is my app.  <a href='/authenticate' > Log in Using Google </a>"
 end
 
 get '/authenticate' do
@@ -29,7 +29,8 @@ get '/authenticated' do
   student = Student.find_or_initialize_by(email: info.email)
   student.name = "#{info.given_name} #{info.family_name}"
   student.save
-  session[:current_student_id] = student.id
+  session[:current_user_id] = student.id
+  session[:admin?] = false
   redirect to('/test')
   #/activities/new
 end
@@ -37,6 +38,7 @@ end
 
 get '/authenticate/admin' do
   # Request authorization
+  user_credentials.redirect_uri = to('/authenticated/admin')
   redirect user_credentials.authorization_uri.to_s, 303
 end
 
@@ -46,6 +48,7 @@ get '/authenticated/admin' do
   user_credentials.code = params[:code] if params[:code]
   # redirect to('/')
   # get access token
+  user_credentials.redirect_uri = to('/authenticated/admin')
   user_credentials.fetch_access_token!
   # set user tokens into session
   set_user_session
@@ -57,7 +60,8 @@ get '/authenticated/admin' do
   admin = Admin.find_or_initialize_by(email: info.email)
   admin.name = "#{info.given_name} #{info.family_name}"
   admin.save
-  session[:current_student_id] = student.id
+  session[:current_user_id] = admin.id
+  session[:admin?] = true
   redirect to('/test')
   #/activities/new
 end
@@ -81,7 +85,12 @@ def set_user_session
 end
 
 def current_user
-  user = Student.find(session[:current_student_id])
+  if session[:admin?]
+    Admin.find(session[:current_user_id])
+  else
+    Student.find(session[:current_user_id])
+  end 
+  
   #to use: @user = current_user
 end
 
