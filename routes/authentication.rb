@@ -62,7 +62,7 @@ get '/authenticated/admin' do
   admin.save
   session[:current_user_id] = admin.id
   session[:admin?] = true
-  redirect to('/test')
+  redirect to('/admin')
   #/activities/new
 end
 
@@ -101,3 +101,7 @@ get "/test" do
   erb :"activity/new"
   
 end
+get "/admin" do 
+  @user = current_user
+  erb :"admin"
+end  
