@@ -1,14 +1,15 @@
-<h1> View Activity <%= @activity.id %> </h1>
+<h1 class="whiteText welcome">Activity <%= @activity.id %>: <%= @activity.title %></h1>
 
-<p><%= @activity.title %></p>
-<p><%= @activity.description %></p>
+<div class="darkBackground whiteText activityForm center">
+    <p class="whiteText activityInfo"><span class="title">Description:</span> <%= @activity.description %></p>
+    <p class="whiteText activityInfo"><span class="title">Location:</span> <%= @activity.location %></p>
+    <p class="whiteText activityInfo"><span class="title">Date:</span> <%= @activity.date %></p>
+    <p class="whiteText activityInfo"><span class="title">Supervisor:</span> <%= @activity.supervisor %></p>
+    <p class="whiteText activityInfo"><span class="title">Supervisor Email:</span> <%= @activity.sup_email %></p>
+    <p class="whiteText activityInfo"><span class="title">Hours:</span><%= @activity.hours %></p>
+</div>
 
-<p><%= @activity.location %></p>
-<p><%= @activity.date %></p>
-<p> <%= @activity.supervisor %></p>
-<p><%= @activity.sup_email %></p>
-<p><%= @activity.hours %></p>
-    
+<a class=" yellowText button" href="/activities/<%= @activity.id %>/delete">Delete Activity <%= @activity.id %></a>
+<a class=" yellowText button2" href="/activities/<%= @activity.id %>/edit">Edit Activity <%= @activity.id %></a>
+<a class=" yellowText button2" href="/activities">Back to Activities</a>
 
-<a href="/activities">Back</a>
-<a href="/activities/<%= @activity.id %>/edit">Edit</a>
